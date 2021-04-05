@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident</title>
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+
+    <div style="color:black">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Incident Impact Prediction</h2>
+            <h3>Opened_by</h3>
+            <input id="first" name="opened_by" type="number ">
+            <h3>Location</h3>
+            <input id="second" name="location" type="number">
+            <h3>Category_id</h3>
+            
+            <input id="third" name="Category_id" type="number">
+            <h3>ID</h3>
+            <input id="four" name="ID" type="number">
+            
+            <br><br> <button id="sub" type="submit ">Predict</button>
+            <br>
+            <br>
+            {{ prediction_text}}
+            
+
+
+
+
+
+        </form>
+
+
+
+       
+    </div>
+
+
+
+
+  <style>
+        body {
+            background-color:blue;
+            text-align: center;
+            padding: 0px;
+        }
+      #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            text-align: center;
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+</body>
+</style>
+</html>
